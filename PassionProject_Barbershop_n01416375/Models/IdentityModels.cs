@@ -25,14 +25,15 @@ namespace PassionProject_Barbershop_n01416375.Models
         {
         }
 
-        DbSet<Customers> Customers { get; set; }
-        DbSet<Barbers> Barbers { get; set; }
-        DbSet<Appointments> Appointments { get; set; }
+        public DbSet<Customers> Customers { get; set; }
+        public DbSet<Barbers> Barbers { get; set; }
+        public DbSet<Appointments> Appointments { get; set; }
 
 
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
+
     }
 }

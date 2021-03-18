@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+using System.ComponentModel;
 
 namespace PassionProject_Barbershop_n01416375.Models
 {
@@ -12,18 +12,28 @@ namespace PassionProject_Barbershop_n01416375.Models
     {
 
         [Key]
-        public int appointmentId { get; set; }
+        public int AppointmentId { get; set; }
 
-        public DateTime appointmentDay { get; set; }
+        public string AppointmentDay { get; set; }
 
         //An appointment belongs to one customer.
         [ForeignKey("Customers")]
-        public int customerId { get; set; }
+        public int? CustomerId { get; set; }
         public virtual Customers Customers { get; set; }
 
         //An appointment belongs to one barber.
         [ForeignKey("Barbers")]
-        public int barberId { get; set; }
+        public int? BarberId { get; set; }
         public virtual Barbers Barbers { get; set; }
+    }
+
+    public class AppointmentsDto
+    {
+        public int AppointmentId { get; set; }
+
+        [DisplayName("Appointment Day")]
+        public string AppointmentDay { get; set; }
+
+ 
     }
 }

@@ -181,7 +181,10 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AppointmentsController.cs" />
+    <Compile Include="Controllers\AppointmentsDataController.cs" />
     <Compile Include="Controllers\CustomersController.cs" />
+    <Compile Include="Controllers\CustomersDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -207,6 +210,26 @@
     <Compile Include="Migrations\202102270403126_mvp4.Designer.cs">
       <DependentUpon>202102270403126_mvp4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103180010136_customers.cs" />
+    <Compile Include="Migrations\202103180010136_customers.Designer.cs">
+      <DependentUpon>202103180010136_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103181319508_appointments.cs" />
+    <Compile Include="Migrations\202103181319508_appointments.Designer.cs">
+      <DependentUpon>202103181319508_appointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103181414113_appointments2.cs" />
+    <Compile Include="Migrations\202103181414113_appointments2.Designer.cs">
+      <DependentUpon>202103181414113_appointments2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103181458356_appointments3.cs" />
+    <Compile Include="Migrations\202103181458356_appointments3.Designer.cs">
+      <DependentUpon>202103181458356_appointments3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202103181617483_customers2.cs" />
+    <Compile Include="Migrations\202103181617483_customers2.Designer.cs">
+      <DependentUpon>202103181617483_customers2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Appointments.cs" />
@@ -222,6 +245,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\barbershop.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -273,9 +297,14 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Customers\Customers.cshtml" />
-    <Content Include="Views\Appointments\ListAppointments.cshtml" />
     <Content Include="Views\Barbers\CreateBarbers.cshtml" />
+    <Content Include="Views\Customers\CreateCustomer.cshtml" />
+    <Content Include="Views\Customers\ListCustomers.cshtml" />
+    <Content Include="Views\Customers\Error.cshtml" />
+    <Content Include="Views\Appointments\CreateAppointment.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Customers\Edit.cshtml" />
+    <Content Include="Views\Customers\DeleteConfirm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +337,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202102270403126_mvp4.resx">
       <DependentUpon>202102270403126_mvp4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103180010136_customers.resx">
+      <DependentUpon>202103180010136_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103181319508_appointments.resx">
+      <DependentUpon>202103181319508_appointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103181414113_appointments2.resx">
+      <DependentUpon>202103181414113_appointments2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103181458356_appointments3.resx">
+      <DependentUpon>202103181458356_appointments3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103181617483_customers2.resx">
+      <DependentUpon>202103181617483_customers2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
